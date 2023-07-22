@@ -5,7 +5,6 @@ import (
 )
 
 func main() {
-	code.CheckValidation("")
-	code.CheckValidation("This!I5A")
-	code.CheckValidation("Auto7&los")
+	// code.IntegerMemory()
+	code.FloatPrecision()
 }
