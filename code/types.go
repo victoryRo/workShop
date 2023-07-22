@@ -46,6 +46,8 @@ func passwordValid(password string) bool {
 	return hasUpper && hasLower && hasNumber && hasSymbol
 }
 
+// -------------------------------------------------------------------------------------
+
 // CheckValidation ...
 func CheckValidation(password string) {
 
@@ -86,6 +88,8 @@ func IntegerMemory() {
 	fmt.Printf("TotalAllocated (Heap) = %v MiB\n", m.TotalAlloc/1024/1024)
 }
 
+// -------------------------------------------------------------------------------------
+
 // FloatPrecision ...
 func FloatPrecision() {
 	var a int = 100
@@ -104,3 +108,39 @@ func FloatPrecision() {
 	// pero se complican rápidamente. Al definir sus variables de punto flotante,
 	// normalmente float64 debería ser su primera opción a menos que necesite ser más eficiente con la memoria.
 }
+
+// -------------------------------------------------------------------------------------
+
+// Overflow ...
+// Desbordamiento y envolvente
+// Cuando intenta inicializar un número con un valor que es demasiado grande
+// para el tipo que estamos usando, obtiene un error de desbordamiento
+func Overflow() {
+	// el numero mas alto aceptado por int8 es (127)
+	// var a int8 = 128
+	// fmt.Println(a)
+}
+
+// NumberWraparound ...
+// Desencadenamiento de números envolventes
+func NumberWraparound() {
+	var a int8
+	var b uint8
+	a = 125
+	b = 253
+
+	for i := 0; i < 5; i++ {
+		a++
+		b++
+		fmt.Println(i, ")", "int8", a, "uint8", b)
+	}
+
+	// En este ejercicio, vimos que, para los enteros con signo,
+	// terminaría con un número negativo y para los enteros sin signo, se vuelve a 0.
+	// Siempre debe considerar el número máximo posible para su variable
+	// y asegurarse de tener el tipo adecuado para respaldar ese número.
+}
+
+// -------------------------------------------------------------------------------------
+
+// Numeros Grandes
