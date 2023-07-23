@@ -170,3 +170,17 @@ func BigNumbers() {
 }
 
 // -------------------------------------------------------------------------------------
+
+// Byte
+// El tipo byte en Go es solo un alias para uint8, que es un número que tiene 8 bits de almacenamiento.
+// En realidad, byte es un tipo significativo y lo verás en muchos lugares.
+// Un bit es un único valor binario, un único interruptor de encendido/apagado.
+// La agrupación de bits en grupos de 8 era un estándar común en la computación temprana
+// y se convirtió en una forma casi universal de codificar datos.
+// 8 bits tienen 256 combinaciones posibles de "apagado" y "encendido",
+// uint8 tiene 256 valores enteros posibles de 0 a 255.
+// Todas las combinaciones de encendido y apagado se representan con este tipo.
+
+// Verá que byte se usa al leer y escribir datos hacia y desde una conexión de red y al leer y escribir datos en archivos.
+
+// -------------------------------------------------------------------------------------
