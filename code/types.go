@@ -2,6 +2,8 @@ package code
 
 import (
 	"fmt"
+	"math"
+	"math/big"
 	"runtime"
 	"unicode"
 )
@@ -143,4 +145,28 @@ func NumberWraparound() {
 
 // -------------------------------------------------------------------------------------
 
-// Numeros Grandes
+// BigNumbers ...
+// sum of very large numbers
+func BigNumbers() {
+	// sumamos un int grande
+	// ser convierte en un numero negativo
+	intA := math.MaxInt64
+	intA = intA + 1
+
+	// sumamos un int grande
+	// retorna el valor correcto de la suma
+	bigA := big.NewInt(math.MaxInt64)
+	bigA.Add(bigA, big.NewInt(1))
+
+	fmt.Println("MaxInt64: ", math.MaxInt64)
+	fmt.Println("Int     :", intA)
+	fmt.Println("Big Int : ", bigA.String())
+	// MaxInt64:  9223372036854775807
+	// Int     : -9223372036854775808
+	// Big Int :  9223372036854775808
+
+	// Si tiene una situación en la que tiene un número cuyo valor es más alto de lo que Go puede administrar,
+	// entonces el paquete big de la biblioteca estándar es lo que necesita.
+}
+
+// -------------------------------------------------------------------------------------
