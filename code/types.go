@@ -184,3 +184,35 @@ func BigNumbers() {
 // Verá que byte se usa al leer y escribir datos hacia y desde una conexión de red y al leer y escribir datos en archivos.
 
 // -------------------------------------------------------------------------------------
+
+// Runas ...
+func Runas() {
+	username := "Sir_King_Uber"
+	s := 'S'
+	i := 'i'
+	r := 'r'
+	o := '_'
+
+	for i := 0; i < len(username); i++ {
+		fmt.Print(username[i], " ")
+	}
+
+	fmt.Println()
+	fmt.Printf("S type %T value %v\n", s, s)
+	fmt.Printf("S type %T value %v\n", i, i)
+	fmt.Printf("S type %T value %v\n", r, r)
+	fmt.Printf("S type %T value %v\n", o, o)
+
+	for idx, v := range username {
+		fmt.Println(idx, string(v))
+	}
+
+	// Cuando el texto está en el tipo string, para permitir esta variabilidad,
+	// Go almacena todas las cadenas como una colección de byte.
+	// Para poder realizar operaciones de forma segura con texto de cualquier tipo de codificación,
+	// de un solo byte o de varios bytes, debe convertirse de una colección de bytes
+	// a una colección de runas.
+
+	// Cuando trabaje con cadenas, asegúrese de verificar con el paquete strings primero.
+	// Está lleno de herramientas útiles que ya pueden hacer lo que necesita.
+}

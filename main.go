@@ -5,5 +5,5 @@ import (
 )
 
 func main() {
-	code.BigNumbers()
+	code.Runas()
 }
