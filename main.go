@@ -1,9 +1,9 @@
 package main
 
 import (
-	"book/workshop/code"
+	"book/workshop/projects"
 )
 
 func main() {
-	code.Runas()
+	projects.SalesTaxCalculator()
 }
