@@ -5,5 +5,6 @@ import (
 )
 
 func main() {
-	projects.SalesTaxCalculator()
+	// projects.SalesTaxCalculator()
+	projects.CheckCredit()
 }
